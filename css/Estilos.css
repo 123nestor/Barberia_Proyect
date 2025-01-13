@@ -1,0 +1,761 @@
+/*Estilos Universal para todo Documento*/
+@font-face{
+    font-family:"Pacifico";
+    src:url(./fonts/Pacifico-Regular.ttf);
+}
+@font-face{
+    font-family:"OpenSans";
+    src:url(fonts/OpenSans-Regular.ttf);
+}
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+body{
+    margin: 0;
+    font-family: 'OpenSans',sans-serif;
+    background: #1e1e1e;
+    color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: 1.5px;
+    font-family: 'OpenSans',sans-serif;
+}
+p{
+    line-height: 25px;
+}
+.contenedor{
+    margin: auto;
+    max-width:1000px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*Estilos de header*/
+header{
+    width: 100%;
+    height: 60px;
+    background: #1e1e1e;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: 20;
+}
+header .contenedor{
+    display: table;
+    font-family: sans-serif;
+}
+header .contenedor .barber{
+ position: absolute;
+ float: left;
+ height: 60px;
+ 
+ align-items: center;
+}
+header .contenedor .barber img{
+    width: 50px;
+    height: 50px;
+    left:10px;
+    object-fit: cover;
+    align-items: center;
+   }
+
+
+/*Estlilos al menu-------------*/
+header #menu-bar{
+    display: none;
+}
+header label{
+    float: right;
+    font-size: 30px;
+    margin: 10px 15;
+    cursor: pointer;
+    color:  #beaf76;
+}
+ header .menu{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transition: all 0.7s;
+    transform: translateY(-120%);
+    opacity:0;
+    background:  rgb(57, 57, 59,0.9);
+    }
+ header .menu a{
+    display: block;
+    color:#beaf76;
+    height: 60px;
+    text-decoration: none;
+    padding: 15px;
+    border-bottom: 1px solid #beaf76;
+}
+header .menu a:hover{
+    color:#fff; 
+}
+header #menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+    opacity: 0.9;
+}
+
+/*Estilos de Banner*/
+.banner{
+    width: 100%;
+    height: 70%;
+    margin-top: 60px;
+    position: relative;
+    z-index:-1000;
+    margin-bottom: 40px;
+}
+.banner .contenedor{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    
+}
+.banner_titulo{
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: #beaf76;
+}
+.banner_text{
+    text-align: center;
+    font-size: 20px;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.banner:before{
+    content: "";
+    width: 100%;
+    height:100%;
+    min-height: -99vh;
+    position: absolute;
+    top:0;
+    left:0;
+    background: rgba(62, 61, 60, 0.429);
+}
+
+/*-ACERCA DE---*/
+.acerca_de .contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+}
+.acerca_de .contenedor img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;  
+}
+.acerca_de .contenedor .acerca{
+    background: rgba(57, 57, 59,0.9);
+    padding: 20px;
+    width: 100%;
+    height: 400px;   
+}
+.acerca_de .contenedor  .btn_reservar{
+    display:block;
+    width: 150px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color:#beaf76;
+    color:#fff;
+    font-size: 17px;
+    font-family: 'OpenSans', Arial, sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    padding: 15px;
+    text-align: center;
+    border:1px solid #beaf76;
+}
+
+.acerca_de .contenedor .acerca .btn_reservar:hover{
+    background-color:rgb(57, 57, 59,0.9);
+    border:1px solid #beaf76;
+    color: #beaf76;
+}
+
+
+/*---lista servicios---*/
+main .menu .contenedor_menu, main .menu .contenedor_menu2{
+    padding: 10px;
+    overflow: hidden;
+    background: rgba(57, 57, 59,0.9);
+}
+main .menu article{
+    width: 100%;
+    float: left;
+    padding: 20px;
+}
+main .menu article .categoria{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    
+}
+main .menu article .platillo{
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 4px dotted #fff;
+    
+}
+main .menu article .platillo .nombre{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    float: left;
+}
+main .menu article .platillo .precio{
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 15px;
+    float: right;
+    color: #beaf76;
+}
+main .menu article .platillo .descripcion{
+    clear: both;
+    font-size: 17px;
+    color: #808182;
+}
+main .menu article .servicio-img{
+    height: 500px;
+
+}
+main .menu article .servicio-img img{
+    width: 100%;
+    object-fit: cover;
+    height:100%
+
+}
+
+
+/*damos estilos servicios hover card*/
+.container_card{
+
+    width: 100%;
+    max-width: 1000px;
+    height:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.container_card  .card{
+    width: 293px;
+    height: 470px;
+    margin: 20px;
+    text-align: left;
+    transition: all 0.25s; 
+    background: rgba(57, 57, 59,0.9);
+}
+.container_card  .card:hover{
+    transform: translateY(-15px);
+    
+}
+.container_card .card img{
+    width: 330px;
+    height: 220px;
+    
+}
+.container_card .card h4{
+    font-weight: 777;
+    font-family: sans-serif;
+    font-size: 20;
+    margin-top:10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}
+.container_card .card p{
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+.container_card .card a{
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    border: 1px solid #aaa;
+    padding: 7px;
+    margin-left: 10px;
+}
+
+/*damos estilos barberos card*/
+.container_barber{
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 50px;
+    background: rgba(57, 57, 59,0.9);
+}
+.container_barber  .card{
+    width: 293px;
+    height: 500px;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in;
+}
+.container_barber  .card:hover{
+    background: #beaf76;
+}
+.container_barber .card img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin:10px auto;
+    align-items: center;
+    border:2px solid #fff;
+    object-fit: cover;
+   
+}
+.container_barber .card h4{
+    font-weight: 777;
+    margin: 15 0;
+    font-family: sans-serif;
+    font-size: 20;
+}
+.container_barber .card p{
+    padding: 0 1rem;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+    height: 150px;
+    
+}
+.container_barber .card a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 19px;
+    border: 1px solid #fff;
+    padding: 8px; 
+    margin: 15px;
+}
+
+/*--DIRECCION--*/
+.direccion .contenedor{
+    display:flex;
+}
+.direccion .contenedor article{
+    width: 50%;
+    text-align: center;
+}
+.direccion .ubicacion  p {
+   padding: 15px 0;
+}
+.direccion .Horarios{
+    float: right;
+    width: 50%;
+    text-align: right;
+    padding: 0 60px;
+}
+.direccion h4{
+    text-align: center; 
+    padding: 15px 0;
+}
+.direccion .Horarios p{
+    width:  50%;
+    float: left;
+    text-align: center;
+}
+
+/*-----MAPA----*/
+.direccion iframe{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: 70%;
+    
+}
+font{
+    color:#beaf76;
+    font-size: 25px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    margin-bottom:30px;
+    text-align: center;
+    font-weight: 700;
+    font-family: sans-serif;
+    
+}
+
+/*---CONTACTO---*/
+main .contacto form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+main .contacto form label{
+    width: 99%;
+    border:none;
+    color: #fff;
+    outline: none;
+    font-size: 15px;
+    margin: 10px 0px;
+    
+}
+main .contacto form select{
+    width: 99%;
+    border:none;
+    color: #fff;
+    outline: none;
+    padding: 10px 15px ;
+    font-size: 15px;
+    background: rgba(57, 57, 59,0.9);
+    margin: 10px 0px;
+    border: 1px solid rgba(57, 57, 59,0.9);
+}
+main .contacto form input, main .contacto form textarea{
+    width: 99%;
+    border:none;
+    color: #fff;
+    outline: none;
+    padding: 10px 15px ;
+    font-size: 15px;
+    background: rgba(57, 57, 59,0.9);
+    margin: 10px 0px;
+    border: 1px solid rgba(57, 57, 59,0.9);
+}
+main .contacto form textarea{
+    width: 99%;   
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    min-width: 99%;
+    max-width: 99%;
+    font-size: 15px;
+    font-family: 'OpenSans', Arial, sans-serif;
+}
+
+main .contacto .btn_enviar{
+    width: 45%;
+    background-color:#beaf76;
+    color:#fff;
+    font-size: 15px;
+    font-family: 'OpenSans', Arial, sans-serif;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    border: none;
+    padding: 10px;
+    border:1px solid #beaf76;
+}
+
+main .contacto form .btn_enviar:hover{
+    background-color:rgb(57, 57, 59,0.9);
+    border:1px solid #beaf76;
+    color: #beaf76;
+}
+main .contacto form input:focus, main .contacto form textarea:focus {
+    border: 1px solid #beaf76;
+}
+
+
+/*------------Estilos de footer---------------------------*/
+footer{
+    background:  rgb(57, 57, 59,0.9);
+    text-align: center;
+    padding: 15px;
+    color:#beaf76;
+    font-size: 17px;
+}
+footer .redes{
+    font-size: 30px;
+    padding: 15px 0px ;
+}
+footer .redes a{
+    color: #beaf76;
+    text-decoration: none;
+    padding: 5px 15px;
+    margin: 0 15px;
+}
+footer .redes a:hover{
+    color: #fff;
+}
+
+
+/*estilos con el boton de wathsapp*/
+.btn-wsp{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+    bottom: 130px;
+    right: 20px;
+    font-size:35px;
+    color: #fff;
+    text-align: center;
+    background-color: #0df053;
+    border-radius: 50%;
+    padding: 5px;
+}
+.btn-wsp:hover{
+    background-color: #0df053;
+    border: none;
+}
+.btn-wsp::before,.btn-wsp::after{
+    content: "";
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #0df053;
+    animation: ondas 1.7s infinite;
+}
+.btn-wsp::before{
+    animation-delay: 1s;
+}
+.btn-wsp::after{
+    animation-delay: 1.5s;
+}
+.btn-wsp i{
+    position: relative;
+    z-index: 3;
+}
+@keyframes ondas {
+    0%{
+        transform: scale(0.7);
+    }
+    15%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: scale(2.0);
+    }
+}
+/*estilos para el boton- ir -arriba*/
+.botoncito{
+    width: 0px;
+    height: 0px;
+    right: 15px;
+    bottom: 50px;
+    background:  #beaf76;;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 0;
+    position: fixed;
+    display: none;
+}
+.botoncito i{
+    position: absolute;
+    font-size: 1.7rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    color:#fff;
+    transition: 0.4s;
+}
+.show{
+    z-index: 40;
+    animation: popup 0.3s ease-in-out;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+.show > i {
+    transform: translate(-50%,-50%) scale(1);
+}
+@keyframes popup{
+    0%{
+        height: 0px;
+        width: 0px;
+    }
+    50%{
+        height: 20px;
+        width: 20px;
+        
+    }
+    100%{
+        height: 50px;
+        width: 50px;
+    }
+}
+
+
+/*---------Estilos responsivOs pantallas grandes------------------------*/
+@media(min-width:480px){
+    header .menu{
+        background:  rgb(57, 57, 59,0.9);
+    }
+    .banner img{
+        width: 100%;
+        height: 100%;
+    }
+    .banner_titulo{
+        font-size: 35px;  
+    }
+
+    .footer .social [class^="icon-"]{
+        margin: 0 7px;
+    }
+    
+}
+
+
+
+@media(min-width:768px){
+    .banner img{
+        width: 100%;
+        height: 100%;    
+    }
+    
+    .contenedor{
+        margin: auto;
+        width: 98%;
+    }
+    
+    .banner_titulo{
+        font-size:30px;
+        text-align: left; 
+    }
+    .banner_text{
+        text-align: left;  
+    }
+    .banner_text{
+        display: block;
+        font-size: 20px;
+    }
+    /*---MENU DE PLATILLOS---*/
+    main .menu article{
+        width: 50%;
+        padding: 20px;
+    
+    }
+    /*galeria de platos*/
+    section .contenedor_galeria figure{
+    width: 400px;
+    height: 300px;
+    max-width:25%;
+    }
+
+    .footer{
+        font-size: 19px;
+    }
+    .footer .social [class^="icon-"]{
+    font-size: 25px;
+    padding: 9px;
+    margin-bottom: 10px;
+    width: 45px;
+    height: 45px;
+    
+    }
+}
+@media(min-width:1024px){
+    .contenedor, .container{
+    margin: auto;
+    width: 1000px;
+    }
+    .nav{
+        position: static;
+        width: auto;
+    }
+    header .menu__Link{
+        background:none;
+        font-size: 20px;
+        color: #fff;
+    }
+        /*para hacer desparecer menu boton*/
+    header .menu{
+        position: static;
+        width: auto;
+        height: auto;
+        background: #1e1e1e;
+        transform: translateX(0%);
+        float: right;
+        display: flex;
+        opacity: 1;
+    }
+    header .menu a{
+        border: none;
+    }
+    header label{
+        display: none;
+    }
+    
+    .banner img{
+     width: 100%;
+     height: 100%;
+     }
+    .banner_titulo{
+        font-size:45px;
+    }
+    .banner_text{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .banner .contenedor{
+        width: 1000px;
+    }
+    main .contacto form input, main .contacto form textarea{
+    width: 49%;
+    
+    }
+    main .contacto form textarea{
+    width: 99%;   
+    height: 150px;
+    min-height: 150px;
+    max-height: 150px;
+    font-size: 15px;
+    font-family: 'OpenSans', Arial, sans-serif;
+    }
+
+    main .contacto form .btn_enviar{
+    width: 25%;
+    
+    }
+    .acerca_de .contenedor{
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    }
+    .acerca_de .contenedor img{
+    width: 50%;
+    height: 400px;
+    object-fit: cover;
+    }
+
+    .acerca_de .contenedor .acerca{
+    padding: 20px;
+    width: 50%;
+    height: 400px;
+    }
+
+}
+
